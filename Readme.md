@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Елизавета Украдыга](https://up.htmlacademy.ru/adaptive/22/user/1664451).
-* Наставник: Сергей Артемов.
+* Наставник: [Сергей Артемов](https://htmlacademy.ru/profile/firefoxic)
 
 ---
 
