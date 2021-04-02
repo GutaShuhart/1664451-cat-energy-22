@@ -1,0 +1,34 @@
+.programs__item {
+  background-color: $background;
+  margin-left: 20px;
+}
+
+.program__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 37px;
+  color: $main-text;
+  padding-left: 20px;
+}
+
+.program__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  color: $base-small-text;
+  padding-left: 20px;
+}
+
+.program__button {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: $main-text;
+  padding-left: 20px;
+}
