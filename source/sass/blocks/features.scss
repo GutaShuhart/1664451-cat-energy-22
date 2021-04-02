@@ -1,0 +1,21 @@
+.features {
+  margin-left: 20px;
+}
+
+.features__title {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  color: $main-text;
+}
+
+.feature-item__text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  color: $base-small-text;
+}
