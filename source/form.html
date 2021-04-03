@@ -4,8 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин питания для котов "Кэт энерджи"</title>
-  <link rel="stylesheet" href="">
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="">
   <link rel="icon" href="" type="image/svg+xml">
   <link rel="apple-touch-icon" href="">
@@ -68,15 +67,15 @@
 
           <fieldset class="form__options option">
             <legend class="visually-hidden">Варианты программы питания</legend>
-            <p class="option__slim">
+            <p class="option__item">
               <input class="option__input" type="radio" name="program" value="slim" id="option-slim" checked>
               <label for="option-slim">Похудение</label>
             </p>
-            <p class="option__fat">
+            <p class="option__item">
               <input class="option__input" type="radio" name="program" value="fat" id="option-fat">
               <label for="option-fat">Набор массы</label>
             </p>
-            <p class="option__advice">
+            <p class="option__item">
               <input class="option__input" type="radio" name="program" value="advice" id="option-advice">
               <label for="option-advice">Не знаю (Нужен ваш совет)</label>
             </p>
@@ -134,9 +133,25 @@
       </div>
     </section>
 
+    <section class="location">
+      <h2 class="visually-hidden">Адрес компании "Кэт энерджи"</h2>
+      <div class="location-wrapper location-wrapper--background">
+        <p class="location__invitation">Приглашаем к сотрудничеству дилеров!</p>
+        <p class="location__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
+      <div class="map">
+        <a class="map-link"
+          href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru"><img
+            src="img/map.jpg" width="320" height="362"
+            alt="Карта офиса по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></a>
+        <img class="map-marker" src="https://via.placeholder.com/57x53" width="57" height="53"
+          alt="Изображение маркера, указываеющего на локацию офиса">
+      </div>
+    </section>
+
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="main-logo main-logo--background">
+        <div class="main-logo">
           <a class="main-logo__link" href="#">
             <img class="main-logo__logo-image" src="img/logo_main_bottom.svg" width="128" height="24" alt="Логотип магазина Кэт энерджи">
           </a>
