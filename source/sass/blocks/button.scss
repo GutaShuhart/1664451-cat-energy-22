@@ -1,0 +1,19 @@
+.button__link {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.button__wrapper {
+  width: 280px;
+  height: 40px;
+  background-color: $button-color;
+  color: $text-on-background;
+}
+
+.button__wrapper--color {
+  background-color: $background-form;
+  color: $base-small-text;
+}
