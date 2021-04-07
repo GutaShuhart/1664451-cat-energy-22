@@ -3,13 +3,16 @@
 @import "global/fonts.scss";
 @import "global/global.scss";
 @import "global/variable.scss";
+@import "blocks/page.scss";
 
 // Blocks
 
 @import "blocks/page-main.scss";
 
 // Header
+@import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
+@import "blocks/nav-list.scss";
 
 // Promo
 
@@ -37,6 +40,7 @@
 
 @import "blocks/page-footer.scss";
 @import "blocks/copyright.scss";
+@import "blocks/social.scss";
 
 // Form
 
