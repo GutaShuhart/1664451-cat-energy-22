@@ -4,8 +4,11 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-  background-color: $button-color;
   color: $text-on-background;
+}
+
+.promo-button__wrapper {
   width: 280px;
   height: 42px;
+  background-color: $button-color;
 }

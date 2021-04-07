@@ -1,0 +1,22 @@
+.page-header__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    height: 100px;
+  }
+
+  .page-header__wrapper {
+    grid-template-columns: 1fr 1fr 6fr;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__wrapper {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}

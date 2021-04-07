@@ -1,0 +1,18 @@
+.page__levelar {
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .page__levelar {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__levelar {
+    width: 1440px;
+    margin: 0 auto;
+  }
+}
