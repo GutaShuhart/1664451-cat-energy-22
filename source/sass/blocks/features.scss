@@ -15,3 +15,26 @@
   line-height: 18px;
   color: $base-small-text;
 }
+
+@media (min-width: $tablet-width) {
+  .features {
+    height: 780px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    height: 512px;
+  }
+
+  .features__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}

@@ -27,3 +27,16 @@
   color: $main-text;
   padding-left: 20px;
 }
+
+@media (min-width: $tablet-width) {
+  .program {
+    height: 372px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program {
+    height: 374px;
+    width: 570px;
+  }
+}

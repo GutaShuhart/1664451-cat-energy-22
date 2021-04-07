@@ -2,6 +2,7 @@
 
 $main-text:hsl(0, 0%, 0%);
 $text-on-background:hsl(0, 0%, 100%);
+$background-white:hsl(0, 0%, 100%);
 $background:hsl(0, 0%, 92%);
 $background-form:hsl(0, 0%, 95%);
 $base-small-text:hsl(0, 0%, 27%);
@@ -10,3 +11,8 @@ $dark:hsl(0, 0%, 7%);
 $button-color:hsl(97, 53%, 47%);
 $shape-color:hsl(97, 53%, 47%);
 $transparent-pass:hsla(97, 53%, 47%, 0.85);
+
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1440px;

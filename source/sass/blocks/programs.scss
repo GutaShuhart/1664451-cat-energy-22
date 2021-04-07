@@ -1,3 +1,11 @@
 .programs__item {
   background-color: $background;
 }
+
+@media (min-width: $desktop-width) {
+  .programs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+  }
+}

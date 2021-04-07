@@ -19,3 +19,30 @@
 .location-wrapper--background {
   background-color: $background-form;
 }
+
+.location__wrapper {
+  display: flex;
+}
+
+@media (min-width: $desktop-width) {
+  .location {
+    position: relative;
+  }
+
+  .location__wrapper {
+    position: absolute;
+    width: 570px;
+    height: 201px;
+    background-color: $background-white;
+  }
+
+  .location__invitation {
+    font-size: 20px;
+    line-height: 21px;
+  }
+
+  .location__adress {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
