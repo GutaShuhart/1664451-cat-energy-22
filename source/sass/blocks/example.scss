@@ -54,31 +54,30 @@
   grid-template-rows: 1fr 1fr;
 }
 
-.example__proof--total:last-child {
-  grid-column: 1/3;
-}
-
 @media (min-width: $tablet-width) {
-  .example {
-    background-color: $background-white;
-    height: 1086px;
-  }
-
   .example__proof {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
   }
 
-  .example__proof--total:last-child {
+  .example__proof--total {
     grid-row: 1/2;
     grid-column: 3/4;
+  }
+
+  .example {
+    background-image: linear-gradient($background-white 0%, $background-white 60%, $background 60%, $background 100%);
   }
 }
 
 @media (min-width: $desktop-width) {
+  .example {
+    background-image: linear-gradient($background-white 0%, $background-white 18%, $background 18%, $background 100%);
+  }
+
   .example__position {
-    height: 656px;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .example__proof {
@@ -86,18 +85,8 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .example__proof:nth-child(1) {
-    grid-row: 1/2;
-    grid-column: 1/2;
-  }
-
-  .example__proof:nth-child(2) {
-    grid-row: 1/2;
-    grid-column: 2/3;
-  }
-
   .example__proof--total {
-    grid-column: 1/3;
     grid-row: 2/3;
+    grid-column: 1/3;
   }
 }

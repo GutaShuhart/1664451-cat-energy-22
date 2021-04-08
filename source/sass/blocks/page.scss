@@ -1,18 +1,23 @@
 .page__levelar {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
+}
+
+.page__body {
+  margin: 0;
+  background-color: $background-white;
 }
 
 @media (min-width: $tablet-width) {
   .page__levelar {
-    width: 768px;
+    width: 708px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page__levelar {
-    width: 1440px;
+    width: 1220px;
     margin: 0 auto;
   }
 }
