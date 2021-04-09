@@ -17,3 +17,22 @@
   text-transform: uppercase;
   color: $main-text;
 }
+
+@media (min-width: $tablet-width) {
+  .extra {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+  }
+
+  .extra__title {
+    grid-column: 1/3;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .extra {
+    display: flex;
+    justify-content: space-between;
+  }
+}

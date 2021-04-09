@@ -16,12 +16,12 @@
   color: $base-small-text;
 }
 
-.location-wrapper--background {
-  background-color: $background-form;
-}
-
 .location__wrapper {
   display: flex;
+}
+
+.location--background {
+  background-color: $background-form;
 }
 
 @media (min-width: $desktop-width) {
@@ -34,6 +34,8 @@
     width: 570px;
     height: 201px;
     background-color: $background-white;
+    top: 50px;
+    left: 135px;
   }
 
   .location__invitation {
