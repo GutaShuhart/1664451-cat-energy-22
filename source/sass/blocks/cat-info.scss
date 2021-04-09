@@ -6,6 +6,9 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $base-small-text;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .cat-info__input::placeholder {
@@ -16,4 +19,25 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $base-small-text;
+}
+
+
+.cat-info__input {
+  height: 46px;
+  font: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  color: $base-small-text;
+  width: 80%;
+}
+
+.cat-info__item label {
+  padding-right: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .cat-info__input {
+    width: 92%;
+  }
 }

@@ -17,3 +17,14 @@
   text-transform: uppercase;
   color: $base-small-text;
 }
+
+.comment__input {
+  min-height: 150px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  width: 100%;
+}
