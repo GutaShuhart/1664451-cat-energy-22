@@ -5,8 +5,41 @@
   font-size: 16px;
   line-height: 20px;
   color: $text-on-background;
+  position: absolute;
+  top: 150px;
+  text-align: center;
+  padding-right: 60px;
+  padding-left: 60px;
+  margin: 0;
 }
 
 .campaign__background {
   background-color: $shape-color;
+}
+
+.campaign {
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .campaign__text {
+    top: 120px;
+    padding-right: 60px;
+    padding-left: 460px;
+    text-align: left;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .campaign {
+    width: 245px;
+    height: 289px;
+  }
+
+  .campaign__text {
+    top: 120px;
+    padding-right: 60px;
+    padding-left: 60px;
+    text-align: center;
+  }
 }
