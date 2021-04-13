@@ -1,4 +1,4 @@
-.page__levelar {
+.page__leveler {
   width: 280px;
   margin: 0 auto;
 }
@@ -9,14 +9,14 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page__levelar {
+  .page__leveler {
     width: 708px;
     margin: 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page__levelar {
+  .page__leveler {
     width: 1220px;
     margin: 0 auto;
   }

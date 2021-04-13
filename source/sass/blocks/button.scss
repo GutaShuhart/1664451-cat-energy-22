@@ -13,7 +13,7 @@
   color: $text-on-background;
 }
 
-.button__wrapper--color {
+.button__wrapper--color_light {
   background-color: $background-form;
   color: $base-small-text;
 }
@@ -24,7 +24,7 @@
     height: 39px;
   }
 
-  .button__wrapper--size {
+  .button__wrapper--size_large {
     width: 100%;
   }
 }
@@ -35,7 +35,7 @@
     height: 40px;
   }
 
-  .button__wrapper--size {
+  .button__wrapper--size_large {
     width: 224px;
     height: 40px;
   }
