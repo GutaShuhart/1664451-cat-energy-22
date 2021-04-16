@@ -9,6 +9,9 @@
   font-size: 36px;
   line-height: 40px;
   color: $main-text;
+  margin: 0;
+  padding-bottom: 33px;
+  padding-top: 27px;
 }
 
 .example__text {
@@ -18,75 +21,212 @@
   font-weight: normal;
   line-height: 18px;
   color: $base-small-text;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
-.example__proof dt {
+.example__proof-item {
+  border: 1px solid $more-light-border;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+}
+
+.example__proof-key {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: normal;
   line-height: 12px;
   color: $base-small-text;
+  position: absolute;
+  top: 46px;
+  text-align: center;
+  background-color: $background;
+  width: 59px;
+  padding: 0 15px;
 }
 
-.example__proof dd {
+.example__proof-value {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 24px;
   color: $main-text;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 14px;
+  padding-left: 2px;
+  padding-bottom: 16px;
 }
 
-.example__proof--total dt,
-.example__proof--total dd {
+.example__proof-key--total,
+.example__proof-value--total {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
   line-height: 20px;
   color: $main-text;
+  text-transform: uppercase;
 }
 
 .example__proof {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
+  margin: 0;
+  column-gap: 31px;
+  row-gap: 34px;
+}
+
+.example__proof-key--total {
+  padding-right: 0;
+}
+
+.example__proof-item--total {
+  display: flex;
+  grid-column: 1/3;
+  justify-content: center;
+}
+
+.example__proof-value--total {
+  margin: 0;
+}
+
+.example__image--current {
+  display: none;
+  width: 100%;
+}
+
+.exemple__background {
+  display: flex;
+  justify-content: center;
+}
+
+.example__image {
+  width: 284px;
 }
 
 @media (min-width: $tablet-width) {
   .example__proof {
     display: grid;
-    grid-template-columns: 1fr 1fr 2fr;
-  }
-
-  .example__proof--total {
-    grid-row: 1/2;
-    grid-column: 3/4;
+    grid-template-columns: minmax(162px, auto) minmax(162px, auto) 1fr;
+    grid-template-rows: 1fr;
+    column-gap: 42px;
+    padding-bottom: 100px;
   }
 
   .example {
-    background-image: linear-gradient($background-white 0%, $background-white 60%, $background 60%, $background 100%);
+    background-image: linear-gradient($background-white 0%, $background-white 56%, $background 44%, $background 100%);
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+    padding-bottom: 64px;
+  }
+
+  .example__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-right: 6px;
+    padding-bottom: 53px;
+  }
+
+  .example__proof-item--total {
+    grid-row: 1/2;
+    grid-column: 3/4;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-evenly;
+  }
+
+  .example__proof-value {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__proof-key {
+    font-size: 14px;
+    line-height: 14px;
+    background-color: white;
+    width: auto;
+    top: 61px;
+    padding: 0 8px;
+  }
+
+  .example__proof-key--total,
+  .example__proof-value--total {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .example__image {
+    width: 708px;
+    height: 620px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .exemple__background {
+    display: flex;
+    justify-content: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
-    background-image: linear-gradient($background-white 0%, $background-white 18%, $background 18%, $background 100%);
+    background-image: linear-gradient($background-white 0%, $background-white 26%, $background-form 18%, $background-form 100%);
+  }
+
+  .example__title {
+    padding-bottom: 148px;
+  }
+
+  .example__text {
+    padding-bottom: 67px;
   }
 
   .example__position {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-left: 110px;
+    padding-right: 110px;
   }
 
   .example__proof {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    row-gap: 60px;
+  }
+
+  .example__proof-value {
+    padding-bottom: 19px;
   }
 
   .example__proof--total {
     grid-row: 2/3;
     grid-column: 1/3;
+  }
+
+  .example__proof-key {
+    background-color: $background-form;
+  }
+
+  .example__proof-key--total {
+    padding-right: 60px;
+  }
+
+  .example__position-text {
+    width: 442px;
+  }
+
+  .example__proof-item--total {
+    grid-row: 2/3;
+    grid-column: 1/3;
+    flex-direction: row;
+    justify-content: end;
   }
 }

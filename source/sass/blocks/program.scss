@@ -1,3 +1,9 @@
+.program {
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .program__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
@@ -5,7 +11,10 @@
   font-size: 24px;
   line-height: 37px;
   color: $main-text;
-  padding-left: 20px;
+  padding-left: 71px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-top: 30px;
 }
 
 .program__text {
@@ -15,7 +24,10 @@
   font-weight: normal;
   line-height: 18px;
   color: $base-small-text;
-  padding-left: 20px;
+  margin: 0;
+  padding-top: 29px;
+  border-bottom: 1px solid $light-border;
+  padding-bottom: 22px;
 }
 
 .program__button {
@@ -25,18 +37,52 @@
   font-size: 16px;
   line-height: 16px;
   color: $main-text;
-  padding-left: 20px;
+  padding-top: 19px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding-bottom: 22px;
 }
 
 @media (min-width: $tablet-width) {
-  .program {
-    height: 372px;
+  .program__title {
+    font-size: 36px;
+    line-height: 36px;
+    padding-left: 34px;
+    padding-top: 77px;
+  }
+
+  .program__text {
+    font-size: 16px;
+    line-height: 24px;
+    padding-top: 25px;
+    border-bottom: none;
+    margin-right: 297px;
+    padding-left: 33px;
+  }
+
+  .program__button {
+    font-size: 20px;
+    line-height: 30px;
+    padding-top: 28px;
+    padding-left: 33px;
+    padding-bottom: 56px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .program {
-    height: 374px;
-    width: 570px;
+  .program__title {
+    padding-left: 193px;
+  }
+
+  .program__text {
+    padding-top: 74px;
+    padding-right: 31px;
+    margin-right: 0;
+  }
+
+  .program__button {
+    padding-top: 4px;
+    padding-bottom: 59px;
   }
 }

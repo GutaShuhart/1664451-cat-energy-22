@@ -1,5 +1,13 @@
 .programs__item {
   background-color: $background;
+  margin-top: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .programs__item {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 @media (min-width: $desktop-width) {

@@ -5,6 +5,9 @@ $text-on-background:hsl(0, 0%, 100%);
 $background-white:hsl(0, 0%, 100%);
 $background:hsl(0, 0%, 92%);
 $background-form:hsl(0, 0%, 95%);
+$border:hsl(0, 0%, 90%);
+$light-border:hsl(0, 0%, 85%);
+$more-light-border:hsl(0, 0%, 80%);
 $base-small-text:hsl(0, 0%, 27%);
 $special-dark:hsl(0, 0%, 13%);
 $dark:hsl(0, 0%, 7%);
@@ -14,5 +17,6 @@ $transparent-pass:hsla(97, 53%, 47%, 0.85);
 
 // Viewports
 
+$phone-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1440px;
