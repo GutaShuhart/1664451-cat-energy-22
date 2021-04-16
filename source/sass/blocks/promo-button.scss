@@ -5,10 +5,22 @@
   font-size: 14px;
   line-height: 18px;
   color: $text-on-background;
+  text-transform: uppercase;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  background-color: $button-color;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 12px;
 }
 
-.promo-button__wrapper {
-  width: 280px;
-  height: 42px;
-  background-color: $button-color;
+@media (min-width: $tablet-width) {
+  .promo-button__link {
+    width: 244px;
+    font-size: 20px;
+    line-height: 20px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+  }
 }
