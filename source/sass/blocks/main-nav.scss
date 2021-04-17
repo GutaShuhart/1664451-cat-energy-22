@@ -27,12 +27,14 @@
 
 @media (min-width: $tablet-width) {
   .main-nav__list {
-    display: flex;
     font-family: "Oswald", "Arial", sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
+    display: grid;
+    grid-template-columns: max-content max-content max-content;
+    column-gap: 35px;
   }
 
   .main-nav__wrapper {
@@ -41,7 +43,6 @@
 
   .main-nav__link {
     border-top: none;
-    padding-right: 34px;
     position: relative;
   }
 
@@ -60,6 +61,7 @@
     font-size: 20px;
     line-height: 24px;
     color: $text-on-background;
+    column-gap: 34px;
   }
 
   .main-nav__link--item_choose::after {
