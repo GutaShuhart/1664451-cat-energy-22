@@ -43,16 +43,11 @@
 
   .main-nav__link {
     border-top: none;
-    position: relative;
+    padding-bottom: 6px;
   }
 
-  .main-nav__link--item_choose::after {
-    content: "";
-    position: absolute;
-    width: 63px;
-    height: 2px;
-    background-color: $shape-color;
-    bottom: 12px;
+  .main-nav__link--item_choose {
+    border-bottom: 2px solid $shape-color;
   }
 }
 
@@ -64,12 +59,15 @@
     column-gap: 34px;
   }
 
-  .main-nav__link--item_choose::after {
-    content: "";
-    position: absolute;
-    width: 68px;
-    height: 2px;
-    background-color: $text-on-background;
-    bottom: 12px;
+  .main-nav__link {
+    padding-bottom: 10px;
+  }
+
+  .main-nav__list--color_black {
+    color: $main-text;
+  }
+
+  .main-nav__link--item_choose {
+    border-bottom: 2px solid $shape-color;
   }
 }

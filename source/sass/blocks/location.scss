@@ -3,8 +3,10 @@
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
-  line-height: 18px;
-  color: $main-text;
+  line-height: 19px;
+  color: $dark;
+  text-transform: uppercase;
+  margin: 0;
 }
 
 .location__adress {
@@ -14,14 +16,44 @@
   font-size: 14px;
   line-height: 20px;
   color: $base-small-text;
+  margin: 0;
 }
 
 .location__wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 29px 0;
 }
 
 .location--background {
   background-color: $background-form;
+}
+
+.location br {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .location__wrapper {
+    margin-left: 71px;
+    column-gap: 308px;
+    padding: 65px 0;
+  }
+
+  .location__invitation {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .location__adress {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  .location br {
+    display: block;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -32,19 +64,25 @@
   .location__wrapper {
     position: absolute;
     width: 570px;
-    height: 201px;
     background-color: $background-white;
-    top: 50px;
+    top: 105px;
+    column-gap: 82px;
+    margin-left: 110px;
+    padding: 61px 0;
   }
 
   .location__invitation {
     font-size: 20px;
-    line-height: 21px;
+    line-height: 25px;
+    padding-left: 77px;
+    padding-top: 5px;
   }
 
   .location__adress {
     font-size: 16px;
-    line-height: 20px;
+    line-height: 21px;
+    text-align: start;
+    padding-right: 52px;
   }
 
   .location__position {
