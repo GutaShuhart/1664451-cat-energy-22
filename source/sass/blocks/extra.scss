@@ -1,38 +1,72 @@
+.extra {
+  border: none;
+  padding: 0;
+  position: relative;
+}
+
+.extra-item {
+  margin: 0;
+}
+
+.extra::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: $shape-color;
+  box-shadow: 200px 0 $shape-color;
+  z-index: -1;
+  top: -50px;
+}
+
 .extra__title {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
-  text-transform: uppercase;
   color: $main-text;
+  background-color: $background-white;
+  padding-right: 20px;
+  margin-bottom: 38px;
 }
 
-.extra label {
-  font-family: "Oswald", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 18px;
-  text-transform: uppercase;
-  color: $main-text;
+.extra__option {
+  margin-bottom: 23px;
 }
 
 @media (min-width: $tablet-width) {
-  .extra {
+  .extra__position {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 58px;
+    row-gap: 42px;
+    margin-left: 40px;
+    margin-top: 24px;
   }
 
   .extra__title {
-    grid-column: 1/3;
+    font-size: 36px;
+    line-height: 36px;
+    width: max-content;
+    padding-left: 40px;
+    padding-right: 41px;
+  }
+
+  .extra__option {
+    margin: 0;
+  }
+
+  .extra::before {
+    top: -52px;
+    right: 41px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .extra {
-    display: flex;
-    justify-content: space-between;
+  .extra__position {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 85px;
   }
 }

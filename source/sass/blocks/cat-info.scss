@@ -9,6 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .cat-info__input::placeholder {
@@ -23,21 +25,39 @@
 
 
 .cat-info__input {
-  height: 46px;
   font: inherit;
   font-size: inherit;
   line-height: inherit;
   text-transform: inherit;
   color: $base-small-text;
-  width: 80%;
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid $more-light-border;
 }
 
-.cat-info__item label {
+.cat-info__label {
   padding-right: 13px;
 }
 
 @media (min-width: $tablet-width) {
+  .cat-info__item {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
   .cat-info__input {
-    width: 92%;
+    font-size: 20px;
+    line-height: 30px;
+    padding: 10px 18px;
+  }
+
+  .cat-info__input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .cat-info__label {
+    padding-right: 18px;
   }
 }

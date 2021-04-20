@@ -1,4 +1,16 @@
-.option__item label {
+.option {
+  padding: 0;
+  border: none;
+}
+
+.option__item {
+  margin: 0;
+  margin-bottom: 22px;
+  padding-left: 43px;
+  position: relative;
+}
+
+.option__label {
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -6,4 +18,57 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $special-dark;
+}
+
+.option__input + .option__label::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $more-light-border;
+  border-radius: 50%;
+  left: -3px;
+  top: -7px;
+}
+
+.option__input:checked + .option__label::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: $shape-color;
+  border-radius: 50%;
+  left: 6px;
+  top: 2px;
+}
+
+@media (min-width: $tablet-width) {
+  .option {
+    border: 1px solid $border;
+  }
+
+  .option__item {
+    padding-left: 87px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .option__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .option__input + .option__label::before {
+    width: 38px;
+    height: 38px;
+    left: 27px;
+    top: -5px;
+  }
+
+  .option__input:checked + .option__label::after {
+    width: 18px;
+    height: 18px;
+    left: 38px;
+    top: 6px;
+  }
 }
