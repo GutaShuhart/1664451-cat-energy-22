@@ -4,6 +4,11 @@
   margin: 0;
 }
 
+.catalog__item {
+  padding-top: 20px;
+  padding-bottom: 25px;
+}
+
 @media (min-width: $tablet-width) {
   .catalog__list {
     display: grid;
