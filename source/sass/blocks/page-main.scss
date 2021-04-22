@@ -14,6 +14,19 @@
   font-size: 36px;
   line-height: 36px;
   color: $main-text;
+  margin-top: 28px;
+  margin-bottom: 41px;
+  position: relative;
+}
+
+.page-main__title::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+  top: -28px;
+  box-shadow: 278px 0 #d9d9d9, -278px 0 #d9d9d9;
 }
 
 .page-main__promo {
