@@ -10,4 +10,16 @@
 .copyright {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .copyright {
+    padding-bottom: 54px;
+  }
+
+  .copyright__link {
+    margin-left: 25px;
+  }
 }

@@ -6,6 +6,10 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $dark;
+  margin: 0;
+  padding-top: 58px;
+  padding-bottom: 8px;
+  text-align: center;
 }
 
 .more-goods__text {
@@ -15,4 +19,71 @@
   font-size: 12px;
   line-height: 16px;
   color: $base-small-text;
+  margin: 0;
+  text-align: center;
+}
+
+.more-goods__button {
+  margin-top: 21px;
+  position: relative;
+}
+
+.more-goods__button::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  bottom: -25px;
+  background-color: #d9d9d9;
+  box-shadow: 275px 0 #d9d9d9, -275px 0 #d9d9d9;
+}
+
+@media (min-width: $tablet-width) {
+  .more-goods {
+    border: 2px solid $background-form;
+  }
+
+  .more-goods__title {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 162px;
+    padding-left: 91px;
+    padding-right: 91px;
+    padding-bottom: 24px;
+  }
+
+  .more-goods__text {
+    font-size: 16px;
+    line-height: 18px;
+    padding-left: 68px;
+    padding-right: 69px;
+  }
+
+  .more-goods__button {
+    margin-top: 86px;
+    width: 248px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .more-goods__button::after {
+    display: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .more-goods__title {
+    padding-top: 159px;
+    padding-left: 51px;
+    padding-right: 50px;
+  }
+
+  .more-goods__text {
+    padding-left: 15px;
+    padding-right: 16px;
+  }
+
+  .more-goods__button {
+    width: 169px;
+  }
 }

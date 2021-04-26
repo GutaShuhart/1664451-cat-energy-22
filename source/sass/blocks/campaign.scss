@@ -5,16 +5,21 @@
   font-size: 16px;
   line-height: 20px;
   color: $text-on-background;
-  position: absolute;
-  top: 150px;
   text-align: center;
-  padding-right: 60px;
-  padding-left: 60px;
   margin: 0;
+  padding-right: 60px;
+  padding-left: 59px;
+  padding-top: 187px;
 }
 
+
 .campaign__background {
-  background-color: $shape-color;
+  height: 289px;
+  background-image: url("../../img/background/campaign.jpg");
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .campaign {
@@ -23,10 +28,14 @@
 
 @media (min-width: $tablet-width) {
   .campaign__text {
-    top: 120px;
-    padding-right: 60px;
-    padding-left: 460px;
+    padding-right: 107px;
+    padding-left: 423px;
+    padding-top: 72px;
     text-align: left;
+  }
+
+  .campaign__background {
+    height: 200px;
   }
 }
 
@@ -41,5 +50,9 @@
     padding-right: 60px;
     padding-left: 60px;
     text-align: center;
+  }
+
+  .campaign__background {
+    height: 289px;
   }
 }
