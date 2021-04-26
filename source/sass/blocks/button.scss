@@ -15,18 +15,15 @@
   padding-bottom: 10px;
 }
 
-.button__link--color_light {
-  background-color: $background-form;
-  color: $base-small-text;
-}
-
 @media (min-width: $tablet-width) {
   .button__link {
     width: 248px;
   }
 
-  .button__wrapper--size_large {
+  .button__link--size_large {
     width: 100%;
+    padding-top: 10px;
+    padding-bottom: 8px;
   }
 }
 
@@ -36,8 +33,11 @@
     height: 40px;
   }
 
-  .button__wrapper--size_large {
-    width: 224px;
-    height: 40px;
+  .button__link {
+    width: 169px;
+  }
+
+  .button__link--size_large {
+    width: 244px;
   }
 }

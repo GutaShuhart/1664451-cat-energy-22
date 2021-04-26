@@ -5,6 +5,26 @@
   font-size: 24px;
   line-height: 24px;
   color: $main-text;
+  margin: 0;
+  margin-top: 25px;
+  background-color: $background-white;
+  width: 247px;
+}
+
+.catalog-extra__wrapper {
+  margin-top: 49px;
+  position: relative;
+}
+
+.catalog-extra__wrapper::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: $shape-color;
+  top: -58px;
+  box-shadow: 200px 0 $shape-color;
+  z-index: -1;
 }
 
 .catalog-extra__list {
@@ -13,10 +33,92 @@
   margin: 0;
 }
 
+.catalog-extra__item {
+  position: relative;
+}
+
+.catalog-extra__item::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: -14px;
+  background-color: $more-light-border;
+}
+
+.catalog-extra__promo {
+  margin-top: 57px;
+  margin-bottom: 35px;
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-extra__title {
+    font-size: 36px;
+    line-height: 36px;
+    margin-top: 70px;
+    padding-left: 37px;
+    padding-right: 36px;
+    width: 338px;
+  }
+
+  .catalog-extra__wrapper::before {
+    top: -93px;
+    left: -70px;
+  }
+
+  .catalog-extra__wrapper {
+    margin-top: 79px;
+  }
+
+  .catalog-extra__list {
+    border-bottom: 1px solid $more-light-border;
+  }
+
+  .catalog-extra__item {
+    border-left: 1px solid $more-light-border;
+    border-right: 1px solid $more-light-border;
+  }
+
+  .catalog-extra__item::before {
+    top: 1px;
+  }
+
+  .catalog-extra__promo {
+    margin-top: 69px;
+    margin-bottom: 76px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .catalog-extra__wrapper {
     display: grid;
-    grid-template-columns: 75% 20%;
-    column-gap: 60px;
+    grid-template-columns: 896fr 245fr;
+    column-gap: 80px;
+    margin-bottom: 86px;
+  }
+
+  .catalog-extra__title {
+    margin-top: 76px;
+    padding-left: 39px;
+    margin-left: -39px;
+    padding-right: 35px;
+  }
+
+  .catalog-extra__wrapper::before {
+    left: -110px;
+    box-shadow: 260px 0 $shape-color;
+  }
+
+  .catalog-extra__list {
+    border-bottom: none;
+  }
+
+  .catalog-extra__item {
+    border-left: none;
+    border-right: none;
+  }
+
+  .catalog-extra__promo {
+    margin: 0;
   }
 }

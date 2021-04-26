@@ -7,14 +7,34 @@
 .catalog__item {
   padding-top: 20px;
   padding-bottom: 25px;
+  position: relative;
 }
 
+.catalog__item::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: -1px;
+  background-color: #d9d9d9;
+  box-shadow: 275px 0 #d9d9d9, -275px 0 #d9d9d9;
+}
+
+
 @media (min-width: $tablet-width) {
+  .catalog__item {
+    padding: 0;
+  }
+
+  .catalog__item::before {
+    display: none;
+  }
+
   .catalog__list {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 60px;
+    row-gap: 140px;
   }
 }
 
@@ -22,7 +42,7 @@
   .catalog__list {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 60px;
-    row-gap: 60px;
+    column-gap: 80px;
+    row-gap: 146px;
   }
 }

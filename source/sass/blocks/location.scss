@@ -22,7 +22,8 @@
 .location__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 29px 0;
+  padding-top: 29px;
+  padding-bottom: 25px;
 }
 
 .location--background {
@@ -37,7 +38,8 @@
   .location__wrapper {
     margin-left: 71px;
     column-gap: 308px;
-    padding: 65px 0;
+    padding-top: 65px;
+    padding-bottom: 55px;
   }
 
   .location__invitation {
@@ -54,6 +56,10 @@
   .location br {
     display: block;
   }
+
+  .location__map {
+    margin-bottom: 34px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -65,7 +71,7 @@
     position: absolute;
     width: 570px;
     background-color: $background-white;
-    top: 105px;
+    top: 95px;
     column-gap: 82px;
     margin-left: 110px;
     padding: 61px 0;
