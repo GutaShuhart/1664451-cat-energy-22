@@ -1,5 +1,6 @@
 .promo {
   display: grid;
+  position: relative;
 }
 
 .promo::after {
@@ -7,12 +8,16 @@
   position: absolute;
   width: 100%;
   height: 302px;
-  top: 67px;
+  top: 1px;
   z-index: -1;
-  background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background.jpg");
+  background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: top, top;
   background-size: cover, cover;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_mobile@2x.jpg");
+  }
 }
 
 .promo__description {
@@ -59,7 +64,7 @@
   .promo {
     display: grid;
     grid-template-rows: min-content min-content;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 110px 1fr 1fr 1fr;
     row-gap: 50px;
   }
 
@@ -68,11 +73,12 @@
   }
 
   .promo__img {
-    grid-column: 2/4;
+    grid-column: 1/4;
     grid-row: 2/3;
     z-index: -1;
     width: 552px;
-    margin-top: -28px;
+    margin-top: -30px;
+    margin-left: 29px;
   }
 
   .promo__button {
@@ -83,13 +89,13 @@
   }
 
   .promo__main-img {
-    width: 619px;
-    height: 604px;
+    width: 709px;
+    height: 609px;
   }
 
   .promo__description {
     grid-column: 2/3;
-    margin-top: 50px;
+    margin-top: 60px;
     row-gap: 41px;
     margin-bottom: 0;
   }
@@ -123,23 +129,30 @@
   .promo::after {
     display: block;
     position: absolute;
+    background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_desktop@1x.jpg");
     z-index: -1;
     width: 50%;
     height: 694px;
     right: 0;
-    top: 0;
+    top: -117px;
+
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_desktop@2x.jpg");
+    }
   }
 
   .promo__main-img {
-    width: 500px;
-    height: 500px;
+    width: 552px;
+    height: 499px;
   }
 
   .promo__img {
     z-index: 1;
     margin: 0;
     grid-column: 3/5;
-    margin-top: -315px;
+    margin-top: -312px;
+    margin-left: -45px;
   }
 
   .promo__button {

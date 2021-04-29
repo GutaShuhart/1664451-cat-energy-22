@@ -85,12 +85,9 @@
     padding-top: 24px;
   }
 
-  .page-header__big-logo {
-    display: block;
-  }
-
   .page-header__logo-image {
-    display: none;
+    width: 175px;
+    height: 52px;
   }
 
   .page-header__main-logo {
@@ -103,11 +100,16 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header__logo-image {
+    width: 202px;
+    height: 59px;
+  }
+
   .page-header__wrapper {
     display: block;
-    padding-left: 114px;
+    padding-left: 111px;
     padding-right: 0;
-    padding-top: 57px;
+    padding-top: 54px;
   }
 
   .page-header__main-nav {

@@ -8,24 +8,24 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page__leveler {
+  .page__leveler--form {
     margin-left: 30px;
     margin-right: 66px;
   }
 
-  .page__leveler--catalog {
+  .page__leveler {
     margin-left: 30px;
     margin-right: 30px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .page__leveler {
+  .page__leveler--form {
     margin-left: 70px;
     margin-right: 110px;
   }
 
-  .page__leveler--catalog {
+  .page__leveler {
     margin-left: 110px;
     margin-right: 110px;
   }
