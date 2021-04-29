@@ -13,6 +13,15 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 12px;
+
+  &:hover {
+    background-color: $shape-effect;
+  }
+
+  &:active {
+    background-color: $shape-effect;
+    color: $text-effect;
+  }
 }
 
 @media (min-width: $tablet-width) {

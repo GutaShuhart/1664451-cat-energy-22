@@ -5,23 +5,27 @@
   <meta charset="utf-8">
   <title>Интернет-магазин питания для котов "Кэт энерджи"</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="icon" href="">
-  <link rel="icon" href="" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/favicon_32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/favicon/favicon.svg" sizes="any" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicon/favicon-apple.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="page-header">
     <div class="page-header__wrapper">
       <a class="page-header__logo-icon" href="#">
-        <img class="page-header__logo-image" src="img/logo_icon.svg" width="34" height="38"
-          alt="Иконка-логотип магазина Кэт энерджи">
-        <img class="page-header__big-logo" src="img/icon/logo_tablet.svg" width="174" height="52"
-          alt="Иконка-логотип магазина Кэт энерджи">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo/logo_desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo/logo_tablet.svg">
+          <img class="page-header__logo-image" src="img/logo/logo_icon.svg" width="34" height="38"
+            alt="Иконка-логотип магазина Кэт энерджи">
+        </picture>
       </a>
       <div class="page-header__main-logo main-logo">
         <a class="main-logo__link" href="#">
-          <img class="main-logo__logo-image" src="img/logo_main_top.svg" width="101" height="18"
+          <img class="main-logo__logo-image" src="img/logo/logo_main_top.svg" width="101" height="18"
             alt="Логотип магазина Кэт энерджи">
         </a>
       </div>
@@ -33,13 +37,13 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--item_choose">Главная</a>
+            <a class="main-nav__link main-nav__link--item-index main-nav__link--item_choose main-nav__link--item-choose_index">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог продукции</a>
+            <a class="main-nav__link main-nav__link--item-index" href="catalog.html">Каталог продукции</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">Подбор программы</a>
+            <a class="main-nav__link main-nav__link--item-index" href="form.html">Подбор программы</a>
           </li>
         </ul>
       </div>
@@ -54,10 +58,17 @@
         <p class="promo__text">Занялся собой? Займись котом!</p>
       </div>
       <div class="promo__img">
-        <img class="promo__main-img" src="img/сontent/main_img.png" alt="Изображение упаковки питания">
+        <picture>
+          <source media="(min-width: 1440px)"
+            srcset="img/сontent/index/index_can_desktop@1x.png 1x, img/сontent/index/index_can_desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/сontent/index/index_can_tablet@1x.png 1x, img/сontent/index/index_can_tablet@2x.png 2x">
+          <img class="promo__main-img" src="img/сontent/index/main_img_mobile@1x.png" width="280" height="270"
+            srcset="img/сontent/index/main_img_mobile@2x.png 2x" alt="Изображение упаковки питания">
+        </picture>
       </div>
       <div class="promo__button promo-button">
-        <a class="promo-button__link promo-button__link--hover promo-button__link--pressed" href="form.html">Подобрать
+        <a class="promo-button__link" href="form.html">Подобрать
           программу</a>
       </div>
     </section>
@@ -125,42 +136,67 @@
             </div>
           </dl>
         </div>
-        <div class="example__background">
-          <img class=" example__image example__image--current" src="https://via.placeholder.com/311x232" width="311"
-            height="232" alt="Изображение кота до похудения">
-          <img class="example__image" src="https://via.placeholder.com/311x232" width="311" height="232"
-            alt="Изображение кота после похудения">
-          <button class="example__button" type="button" aria-label="Выбор изображения кота до похудения"
-            hidden>Было</button>
-          <button class="example__button" type="button" aria-label="Выбор изображения кота до похудения"
-            hidden>Стало</button>
+        <div class="example__promo">
+          <div class="example__background">
+            <picture>
+              <source media="(min-width: 768px)"
+            srcset="img/slider/cat_fat@1x.png 1x, img/slider/cat_fat@2x.png 2x">
+              <img class="example__image example__image--current" src="img/slider/before_mobile@1x.png"
+                srcset="img/slider/before_mobile@2x.png 2x" width="311" height="232"
+                alt="Изображение кота до похудения">
+            </picture>
+            <picture>
+              <source media="(min-width: 768px)"
+              srcset="img/slider/cat_skinny@1x.png 1x, img/slider/cat_skinny@2x.png 2x">
+              <img class="example__image example__image--before" src="img/slider/after_mobile@1x.png"
+                srcset="img/slider/after_mobile@2x.png 2x" width="251" height="240"
+                alt="Изображение кота после похудения">
+            </picture>
+          </div>
+          <div class="example__toggls">
+            <button class="example__button" type="button" aria-label="Выбор изображения кота до похудения">Было</button>
+            <div class="example__progress-bar">
+              <input class="example__progress-bar-input" type="range" id="progress-bar" name="progress-bar" min="0" max="100" value="0" step="1">
+              <label for="progress-bar" class="example__progress-bar-label visually-hidden">Переключатель слайдов</label>
+             <div class="example__toggle"></div>
+            </div>
+            <button class="example__button" type="button"
+              aria-label="Выбор изображения кота до похудения">Стало</button>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="location location--background">
       <h2 class="visually-hidden">Адрес компании "Кэт энерджи"</h2>
-      <div class="location__position page__leveler">
-        <div class="location__wrapper page__leveler">
-          <p class="location__invitation">Приглашаем к сотрудничеству дилеров!</p>
-          <p class="location__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
-        </div>
-        <div class="map page__leveler">
-          <a class="map-link"
-            href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru"><img
-              src="img/map.jpg" width="320" height="362"
-              alt="Карта офиса по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></a>
-          <img class="map-marker" src="https://via.placeholder.com/57x53" width="57" height="53"
-            alt="Изображение маркера, указываеющего на локацию офиса">
-        </div>
+      <div class="location__wrapper page__leveler">
+        <p class="location__invitation">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+        <p class="location__adress">ул. Большая Конюшенная, д.19/8<br><br> Санкт-Петербург</p>
+      </div>
+      <div class="location__map map">
+        <a class="map-link"
+          href="https://www.google.ru/maps/place/%D1%83%D0%BB.+%D0%A1%D1%82%D1%80%D0%BE%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9,+15,+%D0%9C%D0%BE%D1%81%D0%BA%D0%B2%D0%B0,+119311/@55.687031,37.5274293,17z/data=!3m1!4b1!4m5!3m4!1s0x46b54cf65f5c8955:0x694710ccd55501e!8m2!3d55.687031!4d37.529618?hl=ru">
+          <picture>
+            <source media="(min-width: 1440px)"
+            srcset="img/map/map_desktop@1x.jpg 1x, img/map/map_desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)"
+            srcset="img/map/map_tablet@1x.jpg 1x, img/map/map_tablet@2x.jpg 2x">
+          <img
+            src="img/map/map_mobile@1x.jpg" width="100%" height="362"
+            srcset="img/map/map_mobile@2x.jpg 2x"
+            alt="Карта офиса по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+          </picture>
+        </a>
+        <!--<img class="map-marker" src="https://via.placeholder.com/57x53" width="57" height="53"
+          alt="Изображение маркера, указываеющего на локацию офиса">-->
       </div>
     </section>
 
     <footer class="page-footer">
-      <div class="page__leveler">
+      <div class="page__leveler page__leveler--catalog">
         <div class="page-footer__position">
-          <div class="main-logo">
-            <a class="main-logo__link" href="#"><img class="main-logo__logo-image" src="img/logo_main_bottom.svg"
+          <div class="page-footer__logo footer-logo">
+            <a class="footer-logo__link" href="#"><img class="footer-logo__logo-image" src="img/logo/logo_main_bottom.svg"
                 width="128" height="24" alt="Логотип магазина Кэт энерджи">
             </a>
           </div>
