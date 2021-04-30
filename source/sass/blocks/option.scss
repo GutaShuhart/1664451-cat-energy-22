@@ -36,7 +36,8 @@
 }
 
 .option__input:focus + .option__label::before {
-  outline: 1px solid $base-small-text;
+  outline: 2px solid $base-small-text;
+  outline-offset: -2px;
 }
 
 .option__input:disabled + .option__label::before,

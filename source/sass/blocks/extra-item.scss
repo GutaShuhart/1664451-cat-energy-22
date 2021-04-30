@@ -38,7 +38,8 @@
 }
 
 .extra-item__input:focus + .extra-item__label::before {
-  outline: 1px solid $base-small-text;
+  outline: 2px solid $base-small-text;
+  outline-offset: -2px;
 }
 
 .extra-item__input:disabled + .extra-item__label::before,
