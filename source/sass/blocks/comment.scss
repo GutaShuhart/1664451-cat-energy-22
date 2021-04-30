@@ -53,7 +53,8 @@
   }
 
   &:focus {
-    outline: 1px solid $base-small-text;
+    outline: 2px solid $base-small-text;
+    outline-offset: -2px;
   }
 }
 
