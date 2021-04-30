@@ -6,8 +6,10 @@ $background-white:hsl(0, 0%, 100%);
 $background:hsl(0, 0%, 92%);
 $background-form:hsl(0, 0%, 95%);
 $border:hsl(0, 0%, 90%);
+$form-border: hsla(0, 0%, 91%, 1);
 $light-border:hsl(0, 0%, 85%);
 $more-light-border:hsl(0, 0%, 80%);
+$radio-border: hsla(0, 0%, 73%, 1);
 $base-small-text:hsl(0, 0%, 27%);
 $special-dark:hsl(0, 0%, 13%);
 $dark:hsl(0, 0%, 7%);
@@ -19,6 +21,7 @@ $text-effect:hsla(0, 0%, 100%, 0.3);
 $text-effect-transparent:hsla(0, 0%, 100%, 0.6);
 $gray-down: hsla(0, 0%, 70%, 1);
 $gray-hover: hsla(0, 0%, 40%, 1);
+$error: hsla(0, 100%, 75%, 1);
 
 
 // Viewports

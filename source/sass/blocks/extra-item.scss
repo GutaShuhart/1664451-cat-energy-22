@@ -33,6 +33,21 @@
   background-position: 0 0;
 }
 
+.extra-item__input:hover + .extra-item__label::before {
+  border: 1px solid $radio-border;
+}
+
+.extra-item__input:focus + .extra-item__label::before {
+  outline: 1px solid $base-small-text;
+}
+
+.extra-item__input:disabled + .extra-item__label::before,
+.extra-item__input:disabled + .extra-item__label,
+.extra-item__input:checked:disabled + .extra-item__label::after,
+.extra-item__input:checked:disabled + .extra-item__label {
+  opacity: 0.5;
+}
+
 @media (min-width: $tablet-width) {
   .extra-item__label {
     font-size: 20px;

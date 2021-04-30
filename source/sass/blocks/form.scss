@@ -93,6 +93,15 @@
   width: 100%;
   border: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: $shape-effect;
+  }
+
+  &:active {
+    background-color: $shape-effect;
+    color: $text-effect;
+  }
 }
 
 .form__info {

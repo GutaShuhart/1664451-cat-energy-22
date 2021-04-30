@@ -61,8 +61,21 @@
   text-transform: inherit;
   color: $base-small-text;
   width: 100%;
-  border: 1px solid $more-light-border;
+  border: 1px solid $form-border;
   padding: 12px 15px;
+
+  &:hover {
+    border: 1px solid $more-light-border;
+  }
+
+  &:focus {
+    outline: 1px solid $base-small-text;
+  }
+
+  &:invalid {
+    border: 1px solid $error;
+    outline: none;
+  }
 }
 
 .contacts__label {
