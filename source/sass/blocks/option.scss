@@ -5,7 +5,7 @@
 
 .option__item {
   margin: 0;
-  margin-bottom: 22px;
+  margin-bottom: 23px;
   padding-left: 43px;
   position: relative;
 }
@@ -31,6 +31,22 @@
   top: -7px;
 }
 
+.option__input:hover + .option__label::before {
+  border: 1px solid $radio-border;
+}
+
+.option__input:focus + .option__label::before {
+  outline: 1px solid $base-small-text;
+}
+
+.option__input:disabled + .option__label::before,
+.option__input:disabled + .option__label,
+.option__input:checked:disabled + .option__label::after,
+.option__input:checked:disabled + .option__label {
+  opacity: 0.5;
+}
+
+
 .option__input:checked + .option__label::after {
   content: "";
   position: absolute;
@@ -38,8 +54,8 @@
   height: 13px;
   background-color: $shape-color;
   border-radius: 50%;
-  left: 6px;
-  top: 2px;
+  left: 7px;
+  top: 3px;
 }
 
 @media (min-width: $tablet-width) {

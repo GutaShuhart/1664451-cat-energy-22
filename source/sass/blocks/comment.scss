@@ -45,8 +45,16 @@
   padding: 8px 13px;
   min-height: 132px;
   width: 90%;
-  border: 1px solid $more-light-border;
+  border: 1px solid $form-border;
   resize: none;
+
+  &:hover {
+    border: 1px solid $more-light-border;
+  }
+
+  &:focus {
+    outline: 1px solid $base-small-text;
+  }
 }
 
 @media (min-width: $tablet-width) {
