@@ -36,12 +36,17 @@
   height: 362px;
 }
 
+.location--background {
+  background-color: $background-form;
+}
+
 @media (min-width: $tablet-width) {
   .location__wrapper {
     margin-left: 71px;
     column-gap: 308px;
     padding-top: 65px;
     padding-bottom: 55px;
+    margin-right: 72px;
   }
 
   .location__invitation {
@@ -61,10 +66,6 @@
 
   .location__map {
     margin-bottom: 34px;
-  }
-
-  .location--background {
-    background-color: $background-form;
   }
 }
 
