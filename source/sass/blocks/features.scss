@@ -26,18 +26,102 @@
 
 .features__text {
   margin: 0;
+  min-height: 54px;
 }
 
 .features__item {
   padding-left: 80px;
-  padding-bottom: 26px;
+  margin-bottom: 26px;
+  position: relative;
 }
 
 .features__caunt {
   display: none;
 }
 
+.features__item::after {
+  position: absolute;
+  content: "";
+  width: 60px;
+  height: 60px;
+  background-color: $shape-color;
+  top: -3px;
+  left: 0;
+  z-index: -1;
+}
+
+.features__item-icon1::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/sprite.svg#features_1");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  top: 13px;
+  left: 18px;
+}
+
+.features__item-icon2::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/sprite.svg#features_2");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  top: 10px;
+  left: 15px;
+}
+
+.features__item-icon3::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/sprite.svg#features_3");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  top: 12px;
+  left: 18px;
+}
+
+.features__item-icon4::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/sprite.svg#features_4");
+  background-repeat: no-repeat;
+  width: 60px;
+  height: 60px;
+  top: 12px;
+  left: 17px;
+}
+
 @media (min-width: $tablet-width) {
+  .features__item::after {
+    width: 80px;
+    height: 80px;
+    top: 37px;
+    left: 0;
+  }
+
+  .features__item-icon1::before {
+    top: 64px;
+    left: 27px;
+  }
+
+  .features__item-icon2::before {
+    top: 61px;
+    left: 25px;
+  }
+
+  .features__item-icon3::before {
+    top: 62px;
+    left: 28px;
+  }
+
+  .features__item-icon4::before {
+    top: 62px;
+    left: 27px;
+  }
+
   .features__caunt {
     display: flex;
     font-family: "Oswald", "Arial", sans-serif;
@@ -61,7 +145,7 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 94px;
+    row-gap: 68px;
   }
 
   .features__text {
@@ -78,8 +162,33 @@
 }
 
 @media (min-width: $desktop-width) {
+  .features__item::after {
+    top: 40px;
+    left: 2px;
+  }
+
+  .features__item-icon1::before {
+    top: 66px;
+    left: 31px;
+  }
+
+  .features__item-icon2::before {
+    top: 64px;
+    left: 27px;
+  }
+
+  .features__item-icon3::before {
+    top: 64px;
+    left: 30px;
+  }
+
+  .features__item-icon4::before {
+    top: 65px;
+    left: 30px;
+  }
+
   .features {
-    padding-bottom: 97px;
+    margin-bottom: 72px;
   }
 
   .features__list {
