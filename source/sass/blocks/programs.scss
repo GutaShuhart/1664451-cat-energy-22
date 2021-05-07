@@ -1,12 +1,15 @@
 .programs__item {
+  position: relative;
   background-color: $background;
   margin-top: 20px;
 }
+
 
 @media (min-width: $tablet-width) {
   .programs__item {
     margin-top: 0;
     margin-bottom: 30px;
+    position: relative;
   }
 }
 
