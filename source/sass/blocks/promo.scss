@@ -10,13 +10,13 @@
   height: 302px;
   top: 1px;
   z-index: -1;
-  background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_mobile@1x.jpg");
+  background-image: url("../../img/background_green.png"), url("../../img/index_background_mobile@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-position: top, top;
   background-size: cover, cover;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_mobile@2x.jpg");
+    background-image: url("../../img/background_green.png"), url("../../img/index_background_mobile@2x.jpg");
   }
 }
 
@@ -129,7 +129,7 @@
   .promo::after {
     display: block;
     position: absolute;
-    background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_desktop@1x.jpg");
+    background-image: url("../../img/background_green.png"), url("../../img/index_background_desktop@1x.jpg");
     z-index: -1;
     width: 50%;
     height: 694px;
@@ -138,7 +138,7 @@
 
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/background_green.png"), url("../../img/background/index_background_desktop@2x.jpg");
+      background-image: url("../../img/background_green.png"), url("../../img/index_background_desktop@2x.jpg");
     }
   }
 
