@@ -15,14 +15,14 @@
 
 .campaign__background {
   height: 289px;
-  background-image: url("../../img/background/campaign.jpg");
+  background-image: url("../../img/campaign.jpg");
   text-align: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
-    background-image: url("../../img/background/campaign@2x.jpg");
+    background-image: url("../../img/campaign@2x.jpg");
   }
 }
 
@@ -33,14 +33,14 @@
 @media (min-width: $tablet-width) {
   .campaign__background {
     height: 200px;
-    background-image: url("../../img/background/campaign_tablet@1x.jpg");
+    background-image: url("../../img/campaign_tablet@1x.jpg");
     text-align: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/campaign_tablet@2x.jpg");
+      background-image: url("../../img/campaign_tablet@2x.jpg");
     }
   }
 
@@ -67,14 +67,14 @@
 
   .campaign__background {
     height: 289px;
-    background-image: url("../../img/background/campaign_desktop@1x.jpg");
+    background-image: url("../../img/campaign_desktop@1x.jpg");
     text-align: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/background/campaign_desktop@2x.jpg");
+      background-image: url("../../img/campaign_desktop@2x.jpg");
     }
   }
 }
