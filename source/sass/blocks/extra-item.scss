@@ -18,12 +18,11 @@
   width: 28px;
   height: 28px;
   border: 1px solid $more-light-border;
-  border-radius: 2px;
 }
 
 .extra-item__input:checked + .extra-item__label::after {
   content: "";
-  background-image: url("../../img/icon/check-mark.svg");
+  background-image: url("../../img/icons/check_mark.svg");
   position: absolute;
   top: 6px;
   left: 7px;
