@@ -3,11 +3,6 @@
   padding-top: 26px;
 }
 
-.page-footer__social {
-  margin-top: 41px;
-  margin-bottom: 34px;
-}
-
 .page-footer__position {
   position: relative;
 }
@@ -33,7 +28,6 @@
 
 @media (min-width: $tablet-width) {
   .page-footer {
-    height: 150px;
     padding-top: 52px;
   }
 

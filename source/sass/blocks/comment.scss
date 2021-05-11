@@ -8,7 +8,7 @@
   height: 2px;
   width: 100%;
   background-color: $shape-color;
-  top: 15px;
+  top: 13px;
   box-shadow: 200px 0 $shape-color;
   z-index: -1;
 }
@@ -21,7 +21,7 @@
   line-height: 26px;
   color: $main-text;
   background-color: $background-white;
-  padding-right: 15px;
+  padding-right: 23px;
 }
 
 .comment__input::placeholder {

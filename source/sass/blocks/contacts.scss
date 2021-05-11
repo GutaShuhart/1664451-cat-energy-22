@@ -38,6 +38,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: $base-small-text;
+  position: relative;
   display: flex;
   align-items: center;
   margin: 0;
@@ -74,9 +75,51 @@
   }
 
   &:invalid {
-    border: 1px solid $error;
+    border: 2px solid $error;
     outline: none;
   }
+}
+
+.contacts__item-mail::after {
+  content: "";
+  position: absolute;
+  width: 49px;
+  height: 18px;
+  mask: url("../../img/stack.svg#email");
+  mask-position: 0;
+  mask-repeat: no-repeat;
+  background: currentColor;
+  top: 12px;
+  right: 0;
+}
+
+.contacts__item-phone::after {
+  content: "";
+  position: absolute;
+  width: 73px;
+  height: 23px;
+  mask: url("../../img/stack.svg#phone");
+  mask-position: 0;
+  mask-repeat: no-repeat;
+  background-color: $main-text;
+  top: 9px;
+  right: -14px;
+}
+
+.contacts__input:focus + .contacts__item-mail::after {
+  background-color: $shape-effect;
+}
+
+.contacts__input:focus + .contacts__item-phone::after {
+  background-color: $shape-effect;
+}
+
+.contacts__input:invalid + .contacts__item-mail::after {
+  background-color: $error;
+}
+
+.contacts__input:invalid + .contacts__item-phone::after {
+  background-color: $error;
 }
 
 .contacts__label {
@@ -88,6 +131,16 @@
   .contacts__item {
     padding-left: 41px;
     margin-bottom: 20px;
+  }
+
+  .contacts__item-mail::after {
+    top: 18px;
+    right: 4px;
+  }
+
+  .contacts__item-phone::after {
+    top: 16px;
+    right: -9px;
   }
 
   .contacts__title {
