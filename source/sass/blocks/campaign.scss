@@ -8,8 +8,24 @@
   text-align: center;
   margin: 0;
   padding-right: 60px;
-  padding-left: 59px;
+  padding-left: 56px;
   padding-top: 187px;
+}
+
+.campaign__background::before {
+  content: "";
+  position: absolute;
+  width: 198px;
+  height: 197px;
+  mask: url("../../img/stack.svg#gift");
+  mask-position: 0;
+  mask-repeat: no-repeat;
+  background: $text-on-background;
+  margin: auto;
+  top: -100px;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 
 
@@ -50,6 +66,15 @@
     padding-top: 72px;
     text-align: left;
   }
+
+  .campaign__background::before {
+    width: 205px;
+    height: 205px;
+    left: 16px;
+    bottom: 0;
+    margin: 0;
+    top: -6px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -58,10 +83,17 @@
     height: 289px;
   }
 
+  .campaign__background::before {
+    margin: auto;
+    left: 0;
+    bottom: 99px;
+    top: 0;
+  }
+
   .campaign__text {
-    top: 120px;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-top: 187px;
+    padding-right: 43px;
+    padding-left: 39px;
     text-align: center;
   }
 

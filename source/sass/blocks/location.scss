@@ -64,8 +64,8 @@
     display: block;
   }
 
-  .location__map {
-    margin-bottom: 34px;
+  .location__map iframe {
+    height: 400px;
   }
 }
 
@@ -81,7 +81,7 @@
     top: 95px;
     column-gap: 82px;
     margin-left: 110px;
-    padding: 61px 0;
+    padding: 59px 0;
   }
 
   .location__invitation {
