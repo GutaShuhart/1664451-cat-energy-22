@@ -53,18 +53,18 @@
 .features__item-icon1::before {
   position: absolute;
   content: "";
-  background-image: url("../../img/sprite.svg#features_1");
+  background-image: url("../../img/stack.svg#features_img1");
   background-repeat: no-repeat;
-  width: 60px;
-  height: 60px;
-  top: 13px;
-  left: 18px;
+  width: 85px;
+  height: 85px;
+  top: 14px;
+  left: -13px;
 }
 
 .features__item-icon2::before {
   position: absolute;
   content: "";
-  background-image: url("../../img/sprite.svg#features_2");
+  background-image: url("../../img/stack.svg#features_img2");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
@@ -75,7 +75,7 @@
 .features__item-icon3::before {
   position: absolute;
   content: "";
-  background-image: url("../../img/sprite.svg#features_3");
+  background-image: url("../../img/stack.svg#features_img3");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
@@ -86,7 +86,7 @@
 .features__item-icon4::before {
   position: absolute;
   content: "";
-  background-image: url("../../img/sprite.svg#features_4");
+  background-image: url("../../img/stack.svg#features_img4");
   background-repeat: no-repeat;
   width: 60px;
   height: 60px;
