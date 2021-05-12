@@ -14,6 +14,14 @@
   padding-bottom: 8px;
 }
 
+.page-header__logo-icon:hover {
+  opacity: 0.8;
+}
+
+.page-header__logo-icon:active {
+  opacity: 0.6;
+}
+
 .page-header__main-logo {
   justify-self: center;
   align-self: center;
@@ -22,7 +30,7 @@
 
 .page-header__main-nav {
   grid-column: 1/4;
-  display: none;
+  display: block;
 }
 
 .page-header__toggle {
@@ -43,6 +51,7 @@
   position: relative;
   top: 4px;
   left: 4px;
+  display: none;
 }
 
 .page-header__toggle-menu-close {
@@ -52,6 +61,7 @@
   position: relative;
   left: 7px;
   top: 1px;
+  display: block;
 }
 
 @media (min-width: $phone-width) {

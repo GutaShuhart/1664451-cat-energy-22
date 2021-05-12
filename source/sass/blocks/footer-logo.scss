@@ -4,5 +4,13 @@
 }
 
 .footer-logo__logo-image {
-  padding-top: 9px;
+  padding-top: 6px;
+}
+
+.footer-logo__link:hover {
+  opacity: 0.8;
+}
+
+.footer-logo__link:active {
+  opacity: 0.6;
 }
