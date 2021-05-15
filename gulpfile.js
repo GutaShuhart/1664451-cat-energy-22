@@ -71,29 +71,29 @@ exports.server = server;
 
 const html = () => {
   return gulp.src("source/*.html")
-  .pipe(htmlmin({ collapseWhitespace: true }))
-  .pipe(gulp.dest("build"));
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
 
 // Images
 
-const optimizeImages = ()  => {
+const optimizeImages = () => {
   return gulp.src("source/img/**/*.{jpg,png,svg}", "!source/img/icons/**/*.svg")
-  .pipe(imagemin([
-    imagemin.mozjpeg({quality: 75, progressive: true}),
-    imagemin.optipng({optimizationLevel: 3}),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("build/img"));
+    .pipe(imagemin([
+      imagemin.mozjpeg({quality: 75, progressive: true}),
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.optimizeImages = optimizeImages;
 
-  const copyImages = ()  => {
+  const copyImages = () => {
     return gulp.src("source/img/**/*.{jpg,png,svg}", "!source/img/icons/**/*.svg")
-   .pipe(gulp.dest("build/img"));
+      .pipe(gulp.dest("build/img"));
   }
 
 exports.copyImages = copyImages;
@@ -112,10 +112,10 @@ exports.scripts = scripts;
 
 // WebP
 
-const imagewebp = ()  => {
+const imagewebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}", "!source/img/favicon /**/*.*")
-  .pipe(webp({quality:90}))
-  .pipe(gulp.dest("build/img"));
+    .pipe(webp({quality: 90}))
+    .pipe(gulp.dest("build/img"));
 }
 
 exports.imagewebp = imagewebp;
@@ -130,7 +130,7 @@ const copy = (done) => {
   ], {
     base: "source"
   })
-  .pipe(gulp.dest("build"));
+    .pipe(gulp.dest("build"));
   done();
 }
 
@@ -162,13 +162,27 @@ const watcher = () => {
 
 // Build
 
-//const build = gulp.series ();
-//exports.build = build;
+const build = gulp.series(
+    clean,
+    copy,
+    optimizeImages,
+    gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svgstack,
+    imagewebp,
+    ),
+  );
 
-/*const build = gulp.series(
-  clean,
-  copy,
-  optimizeImages,
+exports.build = build;
+
+
+
+exports.default = gulp.series(
+    clean,
+    copy,
+    copyImages,
   gulp.parallel(
     styles,
     html,
@@ -176,23 +190,7 @@ const watcher = () => {
     svgstack,
     imagewebp,
   ),
-);
-exports.build = build;
-*/
-
-
-exports.default = gulp.series(
-  clean,
-  copy,
-  copyImages,
-gulp.parallel(
-  styles,
-  html,
-  scripts,
-  svgstack,
-  imagewebp,
-),
-gulp.series(
-  server,
-  watcher
-));
+  gulp.series(
+    server,
+    watcher
+  ));
