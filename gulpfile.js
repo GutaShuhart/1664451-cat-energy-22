@@ -11,8 +11,8 @@ const sync = require("browser-sync").create();
 const htmlmin = require ("gulp-htmlmin");
 const imagemin = require ("gulp-imagemin");
 const webp = require ("gulp-webp");
-const minify = require('gulp-minify');
-const del = require('del');
+const terser = require("gulp-terser");
+const del = require("del");
 
 // Styles
 
@@ -72,7 +72,8 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/img/icons/**/*.svg", gulp.series("svgstack"));
-  gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/js/script.js", gulp.series(scripts));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Html
@@ -106,6 +107,18 @@ exports.optimizeImages = optimizeImages;
 
 exports.copyImages = copyImages;
 
+// Scripts
+
+const scripts = () => {
+  return gulp.src("source/js/script.js")
+    .pipe(terser())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"))
+    .pipe(sync.stream());
+}
+
+exports.scripts = scripts;
+
 // WebP
 
 const imagewebp = ()  => {
@@ -116,15 +129,6 @@ const imagewebp = ()  => {
 
 exports.imagewebp = imagewebp;
 
-//Js
-const jsminify = ()  => {
-  return gulp.src("source/**/*.js")
-  .pipe(minify())
-  .pipe(gulp.dest("build"));
-}
-
-exports.jsminify = jsminify;
-
 //Copy
 
 const copy = (done) => {
@@ -132,7 +136,6 @@ const copy = (done) => {
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/*.webmanifest",
-    "source/img/**/*.{jpg,png,svg}",
   ], {
     base: "source"
   })
@@ -150,11 +153,33 @@ const clean = (done) => {
 
 exports.clean = clean;
 
+// Reload
+
+const reload = (done) => {
+  sync.reload();
+  done();
+}
 
 // Build
 
 //const build = gulp.series ();
 //exports.build = build;
+
+/*const build = gulp.series(
+  clean,
+  copy,
+  optimizeImages,
+  gulp.parallel(
+    styles,
+    html,
+    scripts,
+    svgstack,
+    imagewebp,
+  ),
+);
+exports.build = build;
+*/
+
 
 exports.default = gulp.series(
   clean,
@@ -163,7 +188,7 @@ exports.default = gulp.series(
 gulp.parallel(
   styles,
   html,
-  jsminify,
+  scripts,
   svgstack,
   imagewebp,
 ),
