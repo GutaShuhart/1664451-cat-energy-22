@@ -67,15 +67,6 @@ const server = (done) => {
 
 exports.server = server;
 
-// Watcher
-
-const watcher = () => {
-  gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
-  gulp.watch("source/img/icons/**/*.svg", gulp.series("svgstack"));
-  gulp.watch("source/js/script.js", gulp.series(scripts));
-  gulp.watch("source/*.html", gulp.series(html, reload));
-}
-
 // Html
 
 const html = () => {
@@ -158,6 +149,15 @@ exports.clean = clean;
 const reload = (done) => {
   sync.reload();
   done();
+}
+
+// Watcher
+
+const watcher = () => {
+  gulp.watch("source/sass/**/*.scss", gulp.series(styles));
+  gulp.watch("source/img/icons/**/*.svg", gulp.series(svgstack, reload));
+  gulp.watch("source/js/script.js", gulp.series(scripts, reload));
+  gulp.watch("source/*.html", gulp.series(html, reload));
 }
 
 // Build
