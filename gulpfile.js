@@ -166,14 +166,14 @@ const build = gulp.series(
     clean,
     copy,
     optimizeImages,
-    gulp.parallel(
+  gulp.parallel(
     styles,
     html,
     scripts,
     svgstack,
     imagewebp,
-    ),
-  );
+  ),
+);
 
 exports.build = build;
 
@@ -193,4 +193,5 @@ exports.default = gulp.series(
   gulp.series(
     server,
     watcher
-  ));
+  )
+);
