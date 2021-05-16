@@ -334,7 +334,18 @@
 
 @media (min-width: $desktop-width) {
   .example {
+    position: relative;
     background-image: linear-gradient($background-white 0%, $background-white 22.5%, $background-form 18%, $background-form 100%);
+  }
+
+  .example::before {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 400px;
+    height: 472px;
+    background-color: $background;
+    top: 137px;
   }
 
   .example__title {
@@ -412,5 +423,6 @@
 
   .example__button--after {
     margin-right: 5px;
+    background-color: $background;
   }
 }
