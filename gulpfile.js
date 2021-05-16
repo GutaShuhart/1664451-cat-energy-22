@@ -80,7 +80,11 @@ exports.html = html;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src(["source/img/**/*.{jpg,png,svg}", "!source/img/icons/**/*.svg"])
+  return gulp.src([
+      "source/img/**/*.{jpg,png,svg}",
+      "!source/img/icons/**/*.svg",
+      "!source/img/logo.svg"
+    ])
     .pipe(imagemin([
       imagemin.mozjpeg({quality: 75, progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -92,7 +96,11 @@ const optimizeImages = () => {
 exports.optimizeImages = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src(["source/img/**/*.{jpg,png,svg}", "!source/img/icons/**/*.svg"])
+  return gulp.src([
+      "source/img/**/*.{jpg,png,svg}",
+      "!source/img/icons/**/*.svg",
+      "!source/img/logo.svg"
+    ])
     .pipe(gulp.dest("build/img"));
 }
 
@@ -113,7 +121,10 @@ exports.scripts = scripts;
 // WebP
 
 const imagewebp = () => {
-  return gulp.src(["source/img/**/*.{jpg,png}", "!source/img/favicon /**/*.*"])
+  return gulp.src([
+      "source/img/**/*.{jpg,png}",
+      "!source/img/favicon/**/*.*"
+    ])
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 }
@@ -123,14 +134,15 @@ exports.imagewebp = imagewebp;
 //Copy
 
 const copy = (done) => {
-  gulp.src ([
+  gulp.src([
     "source/fonts/*.{woff2,woff}",
     "source/*.ico",
     "source/*.webmanifest",
+    "source/img/logo.svg"
   ], {
     base: "source"
   })
-    .pipe(gulp.dest("build"));
+  .pipe(gulp.dest("build"));
   done();
 }
 
@@ -138,7 +150,7 @@ exports.copy = copy;
 
 // Clean
 
-const clean = (done) => {
+const clean = () => {
   return del("build");
 }
 
@@ -163,9 +175,9 @@ const watcher = () => {
 // Build
 
 const build = gulp.series(
-    clean,
-    copy,
-    optimizeImages,
+  clean,
+  copy,
+  optimizeImages,
   gulp.parallel(
     styles,
     html,
@@ -180,9 +192,9 @@ exports.build = build;
 
 
 exports.default = gulp.series(
-    clean,
-    copy,
-    copyImages,
+  clean,
+  copy,
+  copyImages,
   gulp.parallel(
     styles,
     html,

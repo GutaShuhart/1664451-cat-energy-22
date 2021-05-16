@@ -15,9 +15,9 @@
 .campaign__background::before {
   content: "";
   position: absolute;
-  width: 198px;
-  height: 197px;
-  mask: url("../../img/stack.svg#gift");
+  width: 80px;
+  height: 80px;
+  mask-image: url("../../img/stack.svg#gift");
   mask-position: 0;
   mask-repeat: no-repeat;
   background: $text-on-background;

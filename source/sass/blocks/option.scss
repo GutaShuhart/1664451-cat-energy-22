@@ -23,6 +23,7 @@
 .option__input + .option__label::before {
   content: "";
   position: absolute;
+  box-sizing: border-box;
   width: 30px;
   height: 30px;
   border: 1px solid $more-light-border;
@@ -35,28 +36,21 @@
   border: 1px solid $radio-border;
 }
 
-.option__input:focus + .option__label::before {
+.option__input:focus-visible + .option__label::before {
   outline: 2px solid $base-small-text;
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 
-.option__input:disabled + .option__label::before,
-.option__input:disabled + .option__label,
-.option__input:checked:disabled + .option__label::after,
-.option__input:checked:disabled + .option__label {
+.option__input:disabled + .option__label {
   opacity: 0.5;
 }
 
 
-.option__input:checked + .option__label::after {
-  content: "";
-  position: absolute;
-  width: 13px;
-  height: 13px;
-  background-color: $shape-color;
-  border-radius: 50%;
-  left: 7px;
-  top: 3px;
+.option__input:checked + .option__label::before {
+  background-image: url("../../img/stack.svg#check_radio");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 @media (min-width: $tablet-width) {
@@ -76,16 +70,9 @@
   }
 
   .option__input + .option__label::before {
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     left: 27px;
     top: -5px;
-  }
-
-  .option__input:checked + .option__label::after {
-    width: 18px;
-    height: 18px;
-    left: 38px;
-    top: 6px;
   }
 }

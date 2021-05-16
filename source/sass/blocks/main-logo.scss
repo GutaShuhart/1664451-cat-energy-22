@@ -1,6 +1,6 @@
 .main-logo__logo-image {
-  padding-top: 9px;
-  padding-left: 1px;
+  width: 101px;
+  height: 18px;
 }
 
 .main-logo__link:hover {
@@ -9,4 +9,18 @@
 
 .main-logo__link:active {
   opacity: 0.6;
+}
+
+@media (min-width: $tablet-width) {
+  .main-logo__logo-image {
+    width: 102px;
+    height: 19px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo__logo-image {
+    width: 118px;
+    height: 22px;
+  }
 }

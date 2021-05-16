@@ -15,36 +15,29 @@
   position: absolute;
   top: -2px;
   left: 0;
-  width: 28px;
-  height: 28px;
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
   border: 1px solid $more-light-border;
 }
 
-.extra-item__input:checked + .extra-item__label::after {
-  content: "";
-  background-image: url("../../img/icons/check_mark.svg");
-  position: absolute;
-  top: 6px;
-  left: 7px;
-  width: 30px;
-  height: 30px;
+.extra-item__input:checked + .extra-item__label::before {
+  background-image: url("../../img/stack.svg#check_mark");
+  background-size: 26px 26px;
   background-repeat: no-repeat;
-  background-position: 0 0;
+  background-position: center;
 }
 
 .extra-item__input:hover + .extra-item__label::before {
   border: 1px solid $radio-border;
 }
 
-.extra-item__input:focus + .extra-item__label::before {
+.extra-item__input:focus-visible + .extra-item__label::before {
   outline: 2px solid $base-small-text;
-  outline-offset: -2px;
+  outline-offset: 2px;
 }
 
-.extra-item__input:disabled + .extra-item__label::before,
-.extra-item__input:disabled + .extra-item__label,
-.extra-item__input:checked:disabled + .extra-item__label::after,
-.extra-item__input:checked:disabled + .extra-item__label {
+.extra-item__input:disabled + .extra-item__label {
   opacity: 0.5;
 }
 

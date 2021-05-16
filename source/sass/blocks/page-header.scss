@@ -10,8 +10,8 @@
 }
 
 .page-header__logo-icon {
-  padding-top: 12px;
-  padding-bottom: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 .page-header__logo-icon:hover {
@@ -25,7 +25,8 @@
 .page-header__main-logo {
   justify-self: center;
   align-self: center;
-  padding-right: 6px;
+  margin-right: 6px;
+  margin-top: 6px;
 }
 
 .page-header__main-nav {
@@ -45,7 +46,7 @@
 }
 
 .page-header__toggle-menu-open {
-  background-image: url("../../img/icons/menu_button.svg");
+  background-image: url("../../img/stack.svg#menu_button");
   background-repeat: no-repeat;
   background-color: white;
   position: relative;
@@ -55,25 +56,13 @@
 }
 
 .page-header__toggle-menu-close {
-  background-image: url("../../img/icons/menu_closed_button.svg");
+  background-image: url("../../img/stack.svg#menu_closed_button");
   background-repeat: no-repeat;
   background-color: white;
   position: relative;
   left: 7px;
   top: 1px;
   display: block;
-}
-
-@media (min-width: $phone-width) {
-  .page-header__big-logo {
-    display: none;
-  }
-}
-
-@media (max-width: $phone-width) {
-  .page-header__big-logo {
-    display: none;
-  }
 }
 
 @media (min-width: $tablet-width) {
@@ -89,41 +78,49 @@
   }
 
   .page-header__wrapper {
-    display: block;
+    grid-template-columns: min-content min-content;
     padding-left: 30px;
     padding-right: 0;
     padding-top: 24px;
   }
 
-  .page-header__logo-image {
-    width: 175px;
-    height: 52px;
+  .page-header__logo-icon {
+    margin: 0;
   }
 
-  .page-header__main-logo {
-    display: none;
+  .page-header__logo-image {
+    width: 61px;
+    height: 61px;
   }
 
   .page-header__toggle {
     display: none;
   }
+
+  .page-header__main-logo {
+    margin: 0;
+    margin-left: 12px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo-image {
-    width: 202px;
-    height: 59px;
+    width: 70px;
+    height: 66px;
   }
 
   .page-header__wrapper {
-    display: block;
     padding-left: 111px;
     padding-right: 0;
-    padding-top: 54px;
+    padding-top: 27px;
   }
 
   .page-header__main-nav {
     padding-top: 50px;
     margin-right: 112px;
+  }
+
+  .page-header__main-logo {
+    margin-left: 14px;
   }
 }

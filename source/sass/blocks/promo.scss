@@ -64,7 +64,7 @@
   .promo {
     display: grid;
     grid-template-rows: min-content min-content;
-    grid-template-columns: 110px 1fr 1fr 1fr;
+    grid-template-columns: 117px 1fr 1fr 1fr;
     row-gap: 50px;
   }
 
@@ -95,7 +95,7 @@
 
   .promo__description {
     grid-column: 2/3;
-    margin-top: 60px;
+    margin-top: 52px;
     row-gap: 41px;
     margin-bottom: 0;
   }
