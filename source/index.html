@@ -64,13 +64,10 @@
             srcset="img/WebP/index_can_desktop@1x.webp 1x, img/index_can_desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/WebP/index_can_tablet@1x.webp 1x, img/index_can_tablet@2x.webp 2x">
-          <source type="image/webp"
-            srcset="img/WebP/main_img_mobile@1x.webp, img/main_img_mobile@2x.webp 2x">
+          <source type="image/webp" srcset="img/WebP/main_img_mobile@1x.webp, img/main_img_mobile@2x.webp 2x">
 
-          <source media="(min-width: 1440px)"
-            srcset="img/index_can_desktop@1x.png 1x, img/index_can_desktop@2x.png 2x">
-          <source media="(min-width: 768px)"
-            srcset="img/index_can_tablet@1x.png 1x, img/index_can_tablet@2x.png 2x">
+          <source media="(min-width: 1440px)" srcset="img/index_can_desktop@1x.png 1x, img/index_can_desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/index_can_tablet@1x.png 1x, img/index_can_tablet@2x.png 2x">
           <img class="promo__main-img" src="img/main_img_mobile@1x.png" width="280" height="270"
             srcset="img/main_img_mobile@2x.png 2x" alt="Изображение упаковки питания">
         </picture>
@@ -145,30 +142,29 @@
         </div>
         <div class="example__promo">
           <div class="example__background">
-            <picture>
-              <source media="(min-width: 768px)" srcset="img/cat_fat@1x.png 1x, img/cat_fat@2x.png 2x">
-              <img class="example__image example__image--current" src="img/cat_fat_mobile@1x.png"
-                srcset="img/cat_fat_mobile@2x.png 2x" width="311" height="232"
-                alt="Изображение кота до похудения">
-            </picture>
-            <picture>
-              <source media="(min-width: 768px)"
-                srcset="img/cat_skinny@1x.png 1x, img/cat_skinny@2x.png 2x">
-              <img class="example__image example__image--before" src="img/cat_skinny_mobile@1x.png"
-                srcset="img/cat_skinny_mobile@2x.png 2x" width="251" height="240"
-                alt="Изображение кота после похудения">
-            </picture>
+            <div class="example__wrapper example__wrapper--after">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat_fat@1x.png 1x, img/cat_fat@2x.png 2x">
+                <img class="example__image example__image--current" src="img/cat_fat_mobile@1x.png"
+                  srcset="img/cat_fat_mobile@2x.png 2x" width="311" height="232" alt="Изображение кота до похудения">
+              </picture>
+            </div>
+            <div class="example__wrapper example__wrapper--before">
+              <picture>
+                <source media="(min-width: 768px)" srcset="img/cat_skinny@1x.png 1x, img/cat_skinny@2x.png 2x">
+                <img class="example__image example__image--before" src="img/cat_skinny_mobile@1x.png"
+                  srcset="img/cat_skinny_mobile@2x.png 2x" width="251" height="240"
+                  alt="Изображение кота после похудения">
+              </picture>
+            </div>
           </div>
           <div class="example__toggls">
-            <button class="example__button" type="button" aria-label="Выбор изображения кота до похудения">Было</button>
+            <button class="example__button example__button--before" type="button"
+              aria-label="Выбор изображения кота до похудения">Было</button>
             <div class="example__progress-bar">
-              <input class="example__progress-bar-input" type="range" id="progress-bar" name="progress-bar" min="0"
-                max="100" value="0" step="1">
-              <label for="progress-bar" class="example__progress-bar-label visually-hidden">Переключатель
-                слайдов</label>
-              <div class="example__toggle"></div>
+              <div class="example__toggle example__toggle--before example__toggle--after"></div>
             </div>
-            <button class="example__button" type="button"
+            <button class="example__button example__button--after" type="button"
               aria-label="Выбор изображения кота до похудения">Стало</button>
           </div>
         </div>

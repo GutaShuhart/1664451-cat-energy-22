@@ -7,10 +7,12 @@ $background:hsl(0, 0%, 92%);
 $background-form:hsl(0, 0%, 95%);
 $border:hsl(0, 0%, 90%);
 $form-border: hsla(0, 0%, 91%, 1);
+$progressiv-bar: hsla(0, 0%, 86%, 1);
 $light-border:hsl(0, 0%, 85%);
 $icon-catalog: hsla(0, 0%, 83%, 1);
 $more-light-border:hsl(0, 0%, 80%);
 $radio-border: hsla(0, 0%, 73%, 1);
+$border-hover:hsl(0, 0%, 34%);
 $base-small-text:hsl(0, 0%, 27%);
 $special-dark:hsl(0, 0%, 13%);
 $dark:hsl(0, 0%, 7%);
@@ -24,7 +26,9 @@ $gray-down: hsla(0, 0%, 70%, 1);
 $gray-hover: hsla(0, 0%, 40%, 1);
 $gray-icon:hsla(0, 0%, 40%, 1);
 $error: hsla(0, 100%, 75%, 1);
-
+$shadow: hsla(0, 0%, 0%, 0.16);
+$shadow-hover: hsla(0, 0%, 0%, 0.19);
+$shadow-active: hsla(0, 0%, 0%, 0.2);
 
 // Viewports
 

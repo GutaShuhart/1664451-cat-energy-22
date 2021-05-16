@@ -10,8 +10,8 @@
   line-height: 40px;
   color: $main-text;
   margin: 0;
-  padding-bottom: 33px;
-  padding-top: 27px;
+  margin-bottom: 33px;
+  margin-top: 27px;
 }
 
 .example__text {
@@ -97,28 +97,63 @@
   margin: 0;
 }
 
+:root {
+  --curtain-position: 100%;
+}
+
+.example__wrapper {
+  width: 320px;
+  height: 240px;
+  position: absolute;
+  overflow: hidden;
+}
+
+.example__wrapper--before {
+  left: 0;
+  width: calc(100% - var(--curtain-position));
+}
+
+.example__wrapper--after {
+  right: 0;
+  width: var(--curtain-position);
+}
+
 .example__image {
-  display: none;
+  display: block;
+  margin: 0 auto;
 }
 
 .example__image--current {
   display: block;
-  width: 100%;
+  margin: 0 auto;
 }
 
 .example__background {
   display: flex;
   justify-content: center;
   min-height: 251px;
-  align-items: center;
+  width: var(--curtain-position);
+}
+
+.example__progress-bar {
+  width: 82px;
+  height: 12px;
+  border: 1px solid $more-light-border;
+  border-radius: 10px;
+  background-color: $background-white;
+  margin-left: 9px;
+  position: relative;
 }
 
 .example__toggls {
   display: flex;
   justify-content: center;
-  margin-top: 17px;
+  margin-top: 18px;
   padding-bottom: 35px;
+  position: relative;
+  align-items: baseline;
 }
+
 
 .example__button {
   border: none;
@@ -129,6 +164,34 @@
   line-height: 20px;
   color: $main-text;
   text-transform: uppercase;
+  background-color: $background;
+}
+
+.example__button--before {
+  padding-right: 10px;
+}
+
+.example__button--after {
+  padding-left: 15px;
+}
+
+.example__toggle {
+  position: absolute;
+  width: 35px;
+  height: 6px;
+  border-radius: 10px;
+  background-color: $shape-effect;
+  margin-top: 3px;
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+.example__toggle--before {
+  left: 0;
+}
+
+.example__toggle--after {
+  right: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -141,13 +204,14 @@
   }
 
   .example {
-    background-image: linear-gradient($background-white 0%, $background-white 56%, $background 44%, $background 100%);
+    background-image: linear-gradient($background-white 0%, $background-white 55.5%, $background 44%, $background 100%);
   }
 
   .example__title {
     font-size: 60px;
     line-height: 60px;
-    padding-bottom: 64px;
+    margin-bottom: 64px;
+    margin-top: 1px;
   }
 
   .example__text {
@@ -185,11 +249,14 @@
     line-height: 20px;
   }
 
+
+  .example__wrapper {
+    height: 620px;
+  }
+
   .example__image {
     width: 677px;
     height: 507px;
-    margin-left: 40px;
-    margin-right: 40px;
   }
 
   .example__image--before {
@@ -203,21 +270,75 @@
     min-height: 569px;
   }
 
+  .example__toggls {
+    margin-top: -34px;
+    padding-bottom: 69px;
+    align-items: center;
+  }
+
   .example__button {
     font-size: 20px;
     line-height: 30px;
     border-bottom: 1px dotted $base-small-text;
     padding: 0;
+
+    &:hover {
+      border-bottom: 1px solid $border-hover;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+
+  .example__progress-bar {
+    width: 100%;
+    height: 6px;
+    background-color: $progressiv-bar;
+    border: none;
+    margin: 0 24px 0;
+  }
+
+  .example__button--before {
+    padding-right: 0;
+    margin-left: 97px;
+  }
+
+  .example__button--after {
+    padding-left: 0;
+    margin-right: 97px;
+  }
+
+  .example__toggle {
+    position: absolute;
+    left: 45%;
+    top: -17px;
+    width: 32px;
+    height: 32px;
+    border: 1px solid $more-light-border;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px 0 $shadow;
+    background-color: $background-white;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 2px 4px 0 $shadow-hover;
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 $shadow-active;
+      border: 1px solid $shape-color;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
   .example {
-    background-image: linear-gradient($background-white 0%, $background-white 26%, $background-form 18%, $background-form 100%);
+    background-image: linear-gradient($background-white 0%, $background-white 22.5%, $background-form 18%, $background-form 100%);
   }
 
   .example__title {
-    padding-bottom: 148px;
+    padding-bottom: 83px;
   }
 
   .example__text {
@@ -268,13 +389,28 @@
     margin-top: -48px;
   }
 
+  .example__toggls {
+    margin-top: -22px;
+  }
+
   .example__image {
     margin-right: 84px;
-    margin-left: 0;
   }
 
   .example__image--before {
     margin-right: 95px;
     margin-bottom: 10px;
+  }
+
+  .example__button {
+    background-color: $background-form;
+  }
+
+  .example__button--before {
+    margin-left: 36px;
+  }
+
+  .example__button--after {
+    margin-right: 5px;
   }
 }
