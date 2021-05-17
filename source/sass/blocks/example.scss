@@ -11,7 +11,7 @@
   color: $main-text;
   margin: 0;
   margin-bottom: 33px;
-  margin-top: 27px;
+  padding-top: 27px;
 }
 
 .example__text {
@@ -204,7 +204,7 @@
   }
 
   .example {
-    background-image: linear-gradient($background-white 0%, $background-white 55.5%, $background 44%, $background 100%);
+    background-image: linear-gradient($background-white 0%, $background-white 56.5%, $background 44%, $background 100%);
   }
 
   .example__title {
@@ -342,8 +342,8 @@
     content: "";
     position: absolute;
     right: 0;
-    width: 400px;
-    height: 472px;
+    width: 395px;
+    height: 500px;
     background-color: $background;
     top: 137px;
   }
@@ -365,6 +365,7 @@
 
   .example__proof {
     row-gap: 60px;
+    margin-bottom: 76px;
   }
 
   .example__proof-value {
@@ -397,7 +398,7 @@
   }
 
   .example__background {
-    margin-top: -48px;
+    margin-top: -21px;
   }
 
   .example__toggls {
@@ -413,12 +414,17 @@
     margin-bottom: 10px;
   }
 
+  .example__progress-bar {
+    margin-left: 25px;
+    margin-right: 14px;
+  }
+
   .example__button {
     background-color: $background-form;
   }
 
   .example__button--before {
-    margin-left: 36px;
+    margin-left: 39px;
   }
 
   .example__button--after {

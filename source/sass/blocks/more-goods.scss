@@ -11,12 +11,10 @@
   text-transform: uppercase;
   color: $dark;
   margin: 0;
-  // padding-top: 58px;
-  // padding-bottom: 8px;
   text-align: center;
   display: grid;
   justify-items: center;
-  gap: 23px;
+  gap: 28px;
 }
 
 .more-goods__title::before {
@@ -70,10 +68,11 @@
   .more-goods__title {
     font-size: 20px;
     line-height: 22px;
-    padding-top: 162px;
+    padding-top: 51px;
     padding-left: 91px;
     padding-right: 91px;
-    padding-bottom: 24px;
+    padding-bottom: 17px;
+    gap: 50px;
   }
 
   .more-goods__text {
@@ -97,7 +96,7 @@
 
 @media (min-width: $desktop-width) {
   .more-goods__title {
-    padding-top: 159px;
+    padding-top: 48px;
     padding-left: 51px;
     padding-right: 50px;
   }
