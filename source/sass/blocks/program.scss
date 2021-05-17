@@ -24,12 +24,8 @@
   line-height: 18px;
   color: $base-small-text;
   margin-top: 29px;
-  margin-bottom: 22px;
+  padding-bottom: 22px;
   border-bottom: 1px solid $light-border;
-}
-
-.program__text-br {
-  display: none;
 }
 
 .program__button {
@@ -37,7 +33,6 @@
   width: fit-content;
   align-items: center;
   margin-top: 19px;
-  margin-bottom: 22px;
   font-family: "Oswald", "Arial", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -80,11 +75,6 @@
   top: 23px;
   left: 13px;
 }
-
-// .program__arrow {
-//   padding-left: 12px;
-//   padding-bottom: 2px;
-// }
 
 .program::before {
   content: "";
@@ -139,14 +129,10 @@
     border-bottom: none;
   }
 
-  .program__text-br {
-    display: block;
-  }
-
   .program__button {
     font-size: 20px;
     line-height: 30px;
-    margin-top: 51px;
+    margin-top: 26px;
     margin-bottom: 5px;
   }
 
@@ -169,19 +155,16 @@
 
   .program__text {
     margin-top: 74px;
-  }
-
-  .program__text-br {
-    display: none;
+    padding-bottom: 0;
+    margin-bottom: 26px;
   }
 
   .program__button {
     margin-top: 4px;
-    margin-bottom: 59px;
+    margin-bottom: 7px;
   }
 
   .program__button::after {
-    margin-left: 26px;
-    margin-top: 11px;
+    margin-left: 28px;
   }
 }
