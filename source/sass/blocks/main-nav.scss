@@ -66,6 +66,10 @@
   .main-nav__link--item_choose {
     border-bottom: 2px solid $shape-color;
   }
+
+  .main-nav__link--item-choose_index {
+    padding-bottom: 9px;
+  }
 }
 
 @media (min-width: $desktop-width) {
@@ -94,7 +98,7 @@
 
   .main-nav__link--item-index {
     color: $text-on-background;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 
     &:visited {
       color: $text-on-background;

@@ -117,12 +117,12 @@
 
 @media (min-width: $desktop-width) {
   .promo {
-    min-height: 657px;
+    min-height: 655px;
     grid-template-columns: 190px 1fr 1fr 1fr 190px;
   }
 
   .promo__description {
-    margin-top: 104px;
+    margin-top: 102px;
     grid-column: 2/3;
   }
 
@@ -134,7 +134,7 @@
     width: 50%;
     height: 694px;
     right: 0;
-    top: -117px;
+    top: -122px;
 
 
     @media (min-resolution: 2dppx) {
