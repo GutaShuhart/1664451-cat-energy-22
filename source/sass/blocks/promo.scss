@@ -14,6 +14,7 @@
   background-repeat: no-repeat, no-repeat;
   background-position: top, top;
   background-size: cover, cover;
+  background-color: $shape-color;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/background_green.png"), url("../../img/index_background_mobile@2x.jpg");
