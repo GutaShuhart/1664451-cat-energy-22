@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>Интернет-магазин питания для котов "Кэт энерджи"</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
@@ -63,10 +64,10 @@
       <div class="promo__img">
         <picture>
           <source type="image/webp" media="(min-width: 1440px)"
-            srcset="img/WebP/index_can_desktop@1x.webp 1x, img/index_can_desktop@2x.webp 2x">
+            srcset="img/index_can_desktop@1x.webp 1x, img/index_can_desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/WebP/index_can_tablet@1x.webp 1x, img/index_can_tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/WebP/main_img_mobile@1x.webp, img/main_img_mobile@2x.webp 2x">
+            srcset="img/index_can_tablet@1x.webp 1x, img/index_can_tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/main_img_mobile@1x.webp, img/main_img_mobile@2x.webp 2x">
 
           <source media="(min-width: 1440px)" srcset="img/index_can_desktop@1x.png 1x, img/index_can_desktop@2x.png 2x">
           <source media="(min-width: 768px)" srcset="img/index_can_tablet@1x.png 1x, img/index_can_tablet@2x.png 2x">
@@ -137,9 +138,9 @@
               <dt class="example__proof-key">затрачено времени</dt>
               <dd class="example__proof-value">60 дней</dd>
             </div>
-            <div class="example__proof-item--total">
-              <dt class="example__proof-key--total">Затраты на питание:</dt>
-              <dd class="example__proof-value--total">&nbsp;15 000 руб.</dd>
+            <div class="example__conclusion">
+              <dt class="example__conclusion-key">Затраты на питание:</dt>
+              <dd class="example__conclusion-value">&nbsp;15 000 руб.</dd>
             </div>
           </dl>
         </div>
@@ -147,49 +148,50 @@
           <div class="example__background">
             <div class="example__wrapper">
               <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
+                    img/cat_fat@1x.webp 1x,
+                    img/cat_fat@2x.webp 2x
+                    ">
+                <source type="image/webp" srcset="
+                    img/cat_fat@1x.webp,
+                    img/cat_fat@2x.webp 2x
+                  ">
+                <source media="(min-width: 768px)" srcset="
                     img/cat_fat@1x.png 1x,
                     img/cat_fat@2x.png 2x
-                  "
-                >
-                <img
-                  class="example__image example__image--before"
-                  src="img/cat_fat_mobile@1x.png"
-                  srcset="img/cat_fat_mobile@2x.png 2x"
-                  width="312"
-                  height="240"
-                  alt="Изображение кота до похудения"
-                >
+                  ">
+                <img class="example__image example__image--before" src="img/cat_fat_mobile@1x.png"
+                  srcset="img/cat_fat_mobile@2x.png 2x" width="312" height="240" alt="Изображение кота до похудения">
               </picture>
             </div>
             <div class="example__wrapper example__wrapper--after">
               <picture>
-                <source
-                  media="(min-width: 768px)"
-                  srcset="
+                <source type="image/webp" media="(min-width: 768px)" srcset="
+                    img/cat_skinny@1x.webp 1x,
+                    img/cat_skinny@2x.webp 2x
+                    ">
+                <source type="image/webp" srcset="
+                    img/cat_skinny@1x.webp,
+                    img/cat_skinny@2x.webp 2x
+                  ">
+                <source media="(min-width: 768px)" srcset="
                     img/cat_skinny@1x.png 1x,
                     img/cat_skinny@2x.png 2x
-                  "
-                >
-                <img
-                  class="example__image example__image--after"
-                  src="img/cat_skinny_mobile@1x.png"
-                  srcset="img/cat_skinny_mobile@2x.png 2x"
-                  width="312"
-                  height="240"
-                  alt="Изображение кота после похудения"
-                >
+                  ">
+                <img class="example__image example__image--after" src="img/cat_skinny_mobile@1x.png"
+                  srcset="img/cat_skinny_mobile@2x.png 2x" width="312" height="240"
+                  alt="Изображение кота после похудения">
               </picture>
             </div>
           </div>
           <div class="example__toggles">
             <button class="example__button" type="button" aria-label="Выбор изображения кота до похудения">Было</button>
             <div class="example__scale">
-              <div class="example__thumb"></div>
+              <div class="example__thumb"
+                aria-label="Ползунок для выбора изображения кота до похудения или после похудения" tabindex="0"></div>
             </div>
-            <button class="example__button example__button--after" type="button" aria-label="Выбор изображения кота до похудения">Стало</button>
+            <button class="example__button example__button--after" type="button"
+              aria-label="Выбор изображения кота до похудения">Стало</button>
           </div>
         </div>
       </div>
