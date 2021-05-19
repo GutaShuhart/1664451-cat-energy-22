@@ -36,6 +36,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: $shape-color;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../../img/campaign@2x.jpg");
