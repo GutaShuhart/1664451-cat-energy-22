@@ -13,6 +13,8 @@ const imagemin = require ("gulp-imagemin");
 const webp = require ("gulp-webp");
 const terser = require("gulp-terser");
 const del = require("del");
+const ghPages = require('gh-pages');
+const path = require('path');
 
 // Styles
 
@@ -207,3 +209,9 @@ exports.default = gulp.series(
     watcher
   )
 );
+
+
+function deploy(cb) {
+  ghPages.publish(path.join(process.cwd(), './build'), cb);
+}
+exports.deploy = deploy;
